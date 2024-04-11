@@ -4,7 +4,8 @@ async function findKeyword(url) {
         const response = await axios.get(url, {
             responseType: 'document', // Specify that you want the response as an HTML document
             headers: {
-              'Accept': 'text/html' // Request the HTML content explicitly
+              'Accept': 'text/html', // Request the HTML content explicitly
+              'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36' // Spoof the user agent to avoid bot detection  
             }
         });
 
